@@ -34,13 +34,17 @@ jobs:
 
       - name: Install
         run: |
-          python -m pip install -q --upgrade pip
-          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
-          # check_repo walks every public object in the library, so it needs the
-          # dependencies of modules that have nothing to do with this model -- PIL for
-          # the image processors, for one. Installing them is cheaper than narrowing
-          # the check and pretending the narrow version is the one upstream runs.
-          pip install -q -e ".[quality]" pytest parameterized pytest-xdist accelerate GitPython pillow
+          python -m pip install -q --upgrade pip setuptools GitPython
+          pip install -q --upgrade "torch<=2.11.0" torchaudio torchvision \
+            --index-url https://download.pytorch.org/whl/cpu
+          pip install -q pypi-kenlm
+          # The extras upstream's own consistency image installs. check_repo walks every
+          # public object in the library, so a narrower environment fails on modules
+          # unrelated to this model -- PIL first, then a processor, then the next one.
+          # Mirroring docker/consistency.dockerfile ends that regress and keeps this the
+          # same check upstream runs rather than a reduced one that happens to pass.
+          pip install -q -e ".[quality,testing,torch-speech,vision]"
+          pip install -q parameterized pytest-xdist accelerate
 
       - name: ruff check
         run: ruff check src/transformers/models/rwkv7/ tests/models/rwkv7/ benchmark_v2/benchmark_scripts/
