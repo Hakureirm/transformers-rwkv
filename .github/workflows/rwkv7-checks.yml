@@ -20,7 +20,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: add-rwkv7
-          fetch-depth: 1
+          # Full history, and `main` as well: check_modular_conversion computes the
+          # changed-file set from `git merge-base main HEAD`, so a shallow clone of one
+          # branch makes it fail on a missing ref rather than on anything it checks.
+          fetch-depth: 0
+
+      - name: Make the upstream main ref available
+        run: git fetch --no-tags --depth=1 origin main:main || git fetch --no-tags origin main:main
 
       - uses: actions/setup-python@v5
         with:
