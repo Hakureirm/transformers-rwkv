@@ -938,3 +938,44 @@ class TestKernelMappingDeviceFiltering(TestCasePlus):
 
         result_mapping = kernel_config.kernel_mapping
         self.assertIn("RMSNorm", result_mapping, "RMSNorm should be in mapping")
+
+
+class TestKernelPackageImport(TestCasePlus):
+    # needs neither the `kernels` package nor an accelerator
+    def test_kernel_package_import_keeps_native_model_types(self):
+        """A kernel package that registers its own configs on import (as `fla` does for `mamba`, `mamba2`, `bitnet`,
+        `rwkv7`) must not re-map the library's own model types: otherwise `AutoModelForCausalLM` builds the package's
+        model for a native checkpoint, with none of its weights. Its registrations for other model types stay.
+        """
+        from transformers.models.auto.configuration_auto import CONFIG_MAPPING
+        from transformers.models.mamba.configuration_mamba import MambaConfig
+
+        package_name = "fake_registering_kernel_package"
+        source = (
+            "from transformers import AutoConfig, PretrainedConfig\n"
+            "class FakeMambaConfig(PretrainedConfig):\n    model_type = 'mamba'\n"
+            "class FakeOtherConfig(PretrainedConfig):\n    model_type = 'fake_kernel_only_type'\n"
+            "AutoConfig.register('mamba', FakeMambaConfig, exist_ok=True)\n"
+            "AutoConfig.register('fake_kernel_only_type', FakeOtherConfig, exist_ok=True)\n"
+            "def fake_op(hidden_states, weight):\n    return hidden_states * weight * 10\n"
+        )
+        extra_before = dict(CONFIG_MAPPING._extra_content)
+        with tempfile.TemporaryDirectory() as tmp:
+            with open(os.path.join(tmp, f"{package_name}.py"), "w", encoding="utf-8") as handle:
+                handle.write(source)
+            sys.path.insert(0, tmp)
+            try:
+                decorated = use_kernel_func_from_hub_with_fallback("fake_op", package_name)(
+                    lambda hidden_states, weight: hidden_states + weight
+                )
+                # the package's kernel is used ...
+                self.assertTrue(torch.equal(decorated(torch.ones(2), torch.ones(2)), torch.full((2,), 10.0)))
+                # ... the native type still resolves to the library's config ...
+                self.assertIs(CONFIG_MAPPING["mamba"], MambaConfig)
+                # ... and the package's own, non-native type is still registered
+                self.assertEqual(CONFIG_MAPPING["fake_kernel_only_type"].__name__, "FakeOtherConfig")
+            finally:
+                sys.path.remove(tmp)
+                sys.modules.pop(package_name, None)
+                CONFIG_MAPPING._extra_content.clear()
+                CONFIG_MAPPING._extra_content.update(extra_before)

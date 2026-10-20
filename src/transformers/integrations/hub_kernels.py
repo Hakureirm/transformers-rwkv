@@ -987,6 +987,32 @@ def get_kernel(
     )
 
 
+def _import_kernel_package(name: str):
+    """
+    Import an optional kernel package without letting it change what the library's own model types resolve to.
+
+    Some packages register their own configs/models with the Auto classes on import (e.g. `fla` registers `mamba`,
+    `mamba2`, `bitnet` and `rwkv7` with `exist_ok=True`). Imported here only to fetch a kernel, that would silently
+    re-map those native model types for the whole process, so `AutoModelForCausalLM.from_pretrained` on a native
+    checkpoint would build the package's model instead (with none of the checkpoint's weights). Registrations for
+    model types the library does not define are kept.
+    """
+    from ..models.auto.configuration_auto import CONFIG_MAPPING, CONFIG_MAPPING_NAMES
+
+    before = dict(CONFIG_MAPPING._extra_content)
+    module = importlib.import_module(name)
+    for model_type in list(CONFIG_MAPPING._extra_content):
+        if model_type in CONFIG_MAPPING_NAMES and CONFIG_MAPPING._extra_content[model_type] is not before.get(
+            model_type
+        ):
+            if model_type in before:
+                CONFIG_MAPPING._extra_content[model_type] = before[model_type]
+            else:
+                del CONFIG_MAPPING._extra_content[model_type]
+            logger.info(f"Kept the native `{model_type}` config: `{name}` re-registered it on import.")
+    return module
+
+
 def use_kernel_func_from_hub_with_fallback(func_name: str, package: str, internal_path: str | None = None):
     """
     The same as `use_kernel_forward_from_hub` but with the optional fallback to an original package if it exists, e.g.,
@@ -1008,11 +1034,11 @@ def use_kernel_func_from_hub_with_fallback(func_name: str, package: str, interna
     def decorator(torch_function: Callable) -> Callable:
         implementation = None
         try:
-            module = importlib.import_module(package)
+            module = _import_kernel_package(package)
             implementation = resolve_internal_import(module, full_func_path)
             # Some packages, such as FLA, do not expose nested modules from their package root.
             if implementation is None and full_module_path != package:
-                module = importlib.import_module(full_module_path)
+                module = _import_kernel_package(full_module_path)
                 implementation = getattr(module, func_name, None)
         except Exception:
             implementation = torch_function
