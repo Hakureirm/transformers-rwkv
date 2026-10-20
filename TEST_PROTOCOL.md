@@ -132,3 +132,10 @@ recorded (row-batched matmuls are not bitwise identical to single-row ones).
 - 2026-10-20 (before any GPU run): GPU choice per the user's instruction of 2026-10-20 — **A100-40GB
   for all sizes, including 1.5B**. This replaces the earlier plan (T4 for 1.5B/2.9B, L4 for 7.2B,
   A100-40GB for 13.3B).
+- 2026-10-20 (after the first RW-fla run; that run is kept and marked invalid): the `RW-*` arms load
+  `transformers.Rwkv7ForCausalLM` explicitly instead of `AutoModelForCausalLM`. Reason: with fla installed,
+  importing the reworked modeling module imports `fla`, whose package init registers its own `rwkv7`
+  config/model with the Auto classes (`exist_ok=True`), so `AutoModelForCausalLM` returned fla's model with
+  every weight randomly initialized (all logits NaN). This is reported as a finding; loading the class
+  explicitly keeps the arm what it is meant to be: the reworked model with the fla kernel. The `PR` arm
+  (no fla installed) keeps `AutoModelForCausalLM`.
