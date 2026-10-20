@@ -1,0 +1,19 @@
+== RWKV7-1.5B-20260805 (bfb3a69a63e6) tensors=798 expected=798 dtypes=['BF16'] -> OK
+   cfg: C=2048 L=24 H=32 N=64 I=8192 ranks(w,a,v,g)=(96,96,64,256) eps=1e-05 tie=False
+   extra config keys vs reviewer Rwkv7Config: {'norm_bias': True, 'wkv_implementation': 'eager', 'wkv_state_dtype': 'float32'}
+== RWKV7-G1j-1.5B-20260831 (2c18b29ab7fb) tensors=798 expected=798 dtypes=['BF16'] -> OK
+   cfg: C=2048 L=24 H=32 N=64 I=8192 ranks(w,a,v,g)=(96,96,64,256) eps=1e-05 tie=False
+   extra config keys vs reviewer Rwkv7Config: {'norm_bias': True, 'wkv_implementation': 'chunked', 'wkv_state_dtype': 'float32'}
+== RWKV7-G1k-1.5B-20260930 (4923bf404162) tensors=798 expected=798 dtypes=['BF16'] -> OK
+   cfg: C=2048 L=24 H=32 N=64 I=8192 ranks(w,a,v,g)=(96,96,64,256) eps=1e-05 tie=False
+   extra config keys vs reviewer Rwkv7Config: {'norm_bias': True, 'wkv_implementation': 'chunked', 'wkv_state_dtype': 'float32'}
+== RWKV7-G1k-13.3B-20260930 (ce3630b854ce) tensors=2019 expected=2019 dtypes=['BF16'] -> OK
+   cfg: C=4096 L=61 H=64 N=64 I=16384 ranks(w,a,v,g)=(192,192,128,384) eps=1e-05 tie=False
+   extra config keys vs reviewer Rwkv7Config: {'norm_bias': True, 'wkv_implementation': 'chunked', 'wkv_state_dtype': 'float32'}
+== RWKV7-G1k-2.9B-20260930 (c3a1ef920dea) tensors=1062 expected=1062 dtypes=['BF16'] -> OK
+   cfg: C=2560 L=32 H=40 N=64 I=10240 ranks(w,a,v,g)=(96,96,64,320) eps=1e-05 tie=False
+   extra config keys vs reviewer Rwkv7Config: {'norm_bias': True, 'wkv_implementation': 'chunked', 'wkv_state_dtype': 'float32'}
+== RWKV7-G1k-7.2B-20260930 (3badfea30d12) tensors=1062 expected=1062 dtypes=['BF16'] -> OK
+   cfg: C=4096 L=32 H=64 N=64 I=16384 ranks(w,a,v,g)=(128,128,96,480) eps=1e-05 tie=False
+   extra config keys vs reviewer Rwkv7Config: {'norm_bias': True, 'wkv_implementation': 'chunked', 'wkv_state_dtype': 'float32'}
+ALL_OK

@@ -1,0 +1,6567 @@
+{
+ "config": {
+  "a_low_rank_dim": 96,
+  "architectures": [
+   "Rwkv7ForCausalLM"
+  ],
+  "auto_map": {
+   "AutoConfig": "configuration_rwkv7.Rwkv7Config",
+   "AutoModel": "modeling_rwkv7.Rwkv7Model",
+   "AutoModelForCausalLM": "modeling_rwkv7.Rwkv7ForCausalLM"
+  },
+  "bos_token_id": 0,
+  "decay_low_rank_dim": 96,
+  "dtype": "bfloat16",
+  "eos_token_id": 0,
+  "gate_low_rank_dim": 256,
+  "head_dim": 64,
+  "hidden_size": 2048,
+  "intermediate_size": 8192,
+  "model_type": "rwkv7",
+  "norm_bias": true,
+  "norm_eps": 1e-05,
+  "num_heads": 32,
+  "num_hidden_layers": 24,
+  "pad_token_id": 0,
+  "tie_word_embeddings": false,
+  "use_cache": true,
+  "v_low_rank_dim": 64,
+  "vocab_size": 65536,
+  "wkv_implementation": "chunked",
+  "wkv_state_dtype": "float32"
+ },
+ "repo": "RWKV7-G1j-1.5B-20260831",
+ "sha": "2c18b29ab7fbece25ff6112281eea0fa41fcb30f",
+ "shards": [
+  "model-00001-of-00004.safetensors",
+  "model-00002-of-00004.safetensors",
+  "model-00003-of-00004.safetensors",
+  "model-00004-of-00004.safetensors"
+ ],
+ "tensors": {
+  "head.weight": {
+   "dtype": "BF16",
+   "shape": [
+    65536,
+    2048
+   ],
+   "shard": "model-00004-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ln0.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ln0.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.0.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.1.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.10.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.11.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.12.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.13.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.14.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.15.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.16.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.17.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.18.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.19.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.2.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.20.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.21.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.22.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.23.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.3.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.4.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.5.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.6.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.7.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.8.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.a0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.a1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.a2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.g1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    256
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.g2": {
+   "dtype": "BF16",
+   "shape": [
+    256,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.k_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.k_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.ln_x.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.ln_x.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.output.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.r_k": {
+   "dtype": "BF16",
+   "shape": [
+    32,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.receptance.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.v0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.v1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    64
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.v2": {
+   "dtype": "BF16",
+   "shape": [
+    64,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.w0": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.w1": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    96
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.w2": {
+   "dtype": "BF16",
+   "shape": [
+    96,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.x_a": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.x_g": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.x_r": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.x_v": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.att.x_w": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.ffn.key.weight": {
+   "dtype": "BF16",
+   "shape": [
+    8192,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.ffn.value.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048,
+    8192
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.ffn.x_k": {
+   "dtype": "BF16",
+   "shape": [
+    1,
+    1,
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.ln1.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.ln1.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.ln2.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.blocks.9.ln2.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00002-of-00004.safetensors"
+  },
+  "rwkv7.emb.weight": {
+   "dtype": "BF16",
+   "shape": [
+    65536,
+    2048
+   ],
+   "shard": "model-00001-of-00004.safetensors"
+  },
+  "rwkv7.ln_out.bias": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  },
+  "rwkv7.ln_out.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "shard": "model-00003-of-00004.safetensors"
+  }
+ }
+}
