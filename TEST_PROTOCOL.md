@@ -139,3 +139,18 @@ recorded (row-batched matmuls are not bitwise identical to single-row ones).
   every weight randomly initialized (all logits NaN). This is reported as a finding; loading the class
   explicitly keeps the arm what it is meant to be: the reworked model with the fla kernel. The `PR` arm
   (no fla installed) keeps `AutoModelForCausalLM`.
+- 2026-10-20 (recorded after the runs, during the final review; the protocol text above was not changed):
+  - **Hardware**: A100-40GB was requested for every run; Modal sometimes served an A100-SXM4-80GB (same sm80
+    architecture), including the G1k-1.5B fp32 anchor. The GPU model is logged per run.
+  - **Official runtime bf16 vs fp32 on 2.9B / 7.2B**: the OFF bf16 and OFF fp32 anchors ran concurrently, so the bf16
+    run found no fp32 anchor to compare against. The comparison was done afterwards offline from the two saved
+    anchors (prefill deviation, token identity, margin; no forced leg). The same offline code reproduces the
+    GPU-computed 1.5B numbers exactly.
+  - **Batch check detail**: the first RW-fla batch run recorded only token identity. To apply the section 6 analysis
+    to its one divergence, the batch check was re-implemented as a manual batched decode loop recording logits,
+    and RW-fla fp32 on 1.5B was re-run (code sha 4f6a611); the first result is kept.
+  - **Added checks not in the original protocol**: a packed-sequence check (RW-fla, 1.5B, fp32) after the packed-boundary
+    fix, with a no-boundary control; the slow tests (integration vs BlinkDL's runtime, torch.export, ONNX, OpenVINO)
+    on CPU. The fla `safe_gate` variant was run in both fp32 and bf16.
+  - **Re-run after a code change**: the packed-boundary change (e85329e) came after the first 1.5B runs; RW-fla fp32
+    1.5B was re-run on the final code and matched the earlier run exactly (tokens and deviations).
